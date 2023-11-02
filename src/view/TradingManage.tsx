@@ -14,6 +14,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { ContainerBox, FlexBox, FlexCCBox, FlexECBox, FlexSBCBox, FlexSCBox } from '../components/FlexBox'
 import { Carousel, Modal } from 'antd'
 import { Swiper, SwiperSlide } from "swiper/react";
+import {GroupArr} from '../config'
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
@@ -478,19 +479,19 @@ export default function Rank() {
   const Navigate = useNavigate()
 
 
-  const GroupArr = [
-    // { id: 1, icon: AvtorIcon1, title: "274", contractAddress: "0x23432533f70962158e2f854b9A6014ce149A931b", defaultAddress: " 0x9610B26afA8727b42A4C9Da81eA697cAc2431cC0", "coinAddress": "0x55d398326f99059fF775485246999027B3197955" },
-    // { id: 2, icon: AvtorIcon2, title: "275", contractAddress: "0xf9C3162cB05cAF4886d81cf731B5C663B7B772Bc", defaultAddress: "0xd8F80A99559EFf7aA35b34E7Fe0BdBCe2d075e14", "coinAddress": "0x55d398326f99059fF775485246999027B3197955" },
-    { id: 3, icon: AvtorIcon3, title: "276", contractAddress: "0xB59873874d869df130Cc7d08043f22DF416Aa28e", defaultAddress: "0xCb75C706a45fefF971359F53dF7DD6dF47a41013", "coinAddress": contractAddress.unionCoin },
-    { id: 4, icon: AvtorIcon4, title: "277", contractAddress: "", defaultAddress: "0xCb75C706a45fefF971359F53dF7DD6dF47a41013", "coinAddress": contractAddress.unionCoin },
-    { id: 5, icon: AvtorIcon5, title: "278", contractAddress: "", defaultAddress: "0xCb75C706a45fefF971359F53dF7DD6dF47a41013", "coinAddress": contractAddress.unionCoin },
-    { id: 6, icon: AvtorIcon6, title: "279", contractAddress: "", defaultAddress: "0xCb75C706a45fefF971359F53dF7DD6dF47a41013", "coinAddress": contractAddress.unionCoin },
-    { id: 7, icon: AvtorIcon7, title: "280", contractAddress: "", defaultAddress: "0xCb75C706a45fefF971359F53dF7DD6dF47a41013", "coinAddress": contractAddress.unionCoin },
-    { id: 8, icon: AvtorIcon8, title: "281", contractAddress: "", defaultAddress: "0xCb75C706a45fefF971359F53dF7DD6dF47a41013", "coinAddress": contractAddress.unionCoin },
-    { id: 9, icon: AvtorIcon9, title: "282", contractAddress: "", defaultAddress: "0xCb75C706a45fefF971359F53dF7DD6dF47a41013", "coinAddress": contractAddress.unionCoin },
-    { id: 10, icon: AvtorIcon10, title: "283", contractAddress: "", defaultAddress: "0xCb75C706a45fefF971359F53dF7DD6dF47a41013", "coinAddress": contractAddress.unionCoin },
+  // const GroupArr = [
+  //   { id: 1, icon: AvtorIcon1, title: "274", contractAddress: "0x23432533f70962158e2f854b9A6014ce149A931b", defaultAddress: " 0x9610B26afA8727b42A4C9Da81eA697cAc2431cC0", "coinAddress": "0x55d398326f99059fF775485246999027B3197955" },
+  //   { id: 2, icon: AvtorIcon2, title: "275", contractAddress: "0xf9C3162cB05cAF4886d81cf731B5C663B7B772Bc", defaultAddress: "0xd8F80A99559EFf7aA35b34E7Fe0BdBCe2d075e14", "coinAddress": "0x55d398326f99059fF775485246999027B3197955" },
+  //   { id: 3, icon: AvtorIcon3, title: "276", contractAddress: "0xB59873874d869df130Cc7d08043f22DF416Aa28e", defaultAddress: "0xCb75C706a45fefF971359F53dF7DD6dF47a41013", "coinAddress": contractAddress.unionCoin },
+  //   { id: 4, icon: AvtorIcon4, title: "277", contractAddress: "", defaultAddress: "0xCb75C706a45fefF971359F53dF7DD6dF47a41013", "coinAddress": contractAddress.unionCoin },
+  //   { id: 5, icon: AvtorIcon5, title: "278", contractAddress: "", defaultAddress: "0xCb75C706a45fefF971359F53dF7DD6dF47a41013", "coinAddress": contractAddress.unionCoin },
+  //   { id: 6, icon: AvtorIcon6, title: "279", contractAddress: "", defaultAddress: "0xCb75C706a45fefF971359F53dF7DD6dF47a41013", "coinAddress": contractAddress.unionCoin },
+  //   { id: 7, icon: AvtorIcon7, title: "280", contractAddress: "", defaultAddress: "0xCb75C706a45fefF971359F53dF7DD6dF47a41013", "coinAddress": contractAddress.unionCoin },
+  //   { id: 8, icon: AvtorIcon8, title: "281", contractAddress: "", defaultAddress: "0xCb75C706a45fefF971359F53dF7DD6dF47a41013", "coinAddress": contractAddress.unionCoin },
+  //   { id: 9, icon: AvtorIcon9, title: "282", contractAddress: "", defaultAddress: "0xCb75C706a45fefF971359F53dF7DD6dF47a41013", "coinAddress": contractAddress.unionCoin },
+  //   { id: 10, icon: AvtorIcon10, title: "283", contractAddress: "", defaultAddress: "0xCb75C706a45fefF971359F53dF7DD6dF47a41013", "coinAddress": contractAddress.unionCoin },
    
-  ]
+  // ]
 
   const bindFun = (address: any, contractAddress: any) => {
     if (!account) return addMessage(t("Please link wallet"))

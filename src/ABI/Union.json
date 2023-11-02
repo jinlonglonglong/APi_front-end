@@ -63,6 +63,25 @@
         "type": "address"
       }
     ],
+    "name": "blockUsers",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
     "name": "bound",
     "outputs": [
       {
@@ -108,6 +127,19 @@
         "internalType": "uint256",
         "name": "",
         "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "buyBackSwitch",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
       }
     ],
     "stateMutability": "view",
@@ -457,6 +489,19 @@
   },
   {
     "inputs": [],
+    "name": "funSwitch",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "generationRatioBase",
     "outputs": [
       {
@@ -660,6 +705,19 @@
   },
   {
     "inputs": [],
+    "name": "iMixInterface",
+    "outputs": [
+      {
+        "internalType": "contract MixInterface",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "initialize",
     "outputs": [],
     "stateMutability": "nonpayable",
@@ -818,6 +876,30 @@
     "type": "function"
   },
   {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "financialType",
+        "type": "uint256"
+      }
+    ],
+    "name": "performance",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "initailPerformance",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [],
     "name": "ratioBase",
     "outputs": [
@@ -878,6 +960,37 @@
   {
     "inputs": [
       {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "state",
+        "type": "bool"
+      }
+    ],
+    "name": "setBlockUser",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bool",
+        "name": "_buyBackSwitch",
+        "type": "bool"
+      }
+    ],
+    "name": "setBuyBackSwitch",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "uint256",
         "name": "_rate",
         "type": "uint256"
@@ -904,6 +1017,29 @@
   {
     "inputs": [
       {
+        "internalType": "address",
+        "name": "_add1",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_add2",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_add3",
+        "type": "address"
+      }
+    ],
+    "name": "setFactoryAdds",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "uint256",
         "name": "_cycle",
         "type": "uint256"
@@ -915,6 +1051,99 @@
       }
     ],
     "name": "setFinancialInterestRate",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_financialManagementCycle",
+        "type": "uint256"
+      }
+    ],
+    "name": "setFinancialManagementCycle",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bool",
+        "name": "_funSwitch",
+        "type": "bool"
+      }
+    ],
+    "name": "setFunSwithc",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_oneGenRatio",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_twoGenRatio",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_threeGenRatio",
+        "type": "uint256"
+      }
+    ],
+    "name": "setLastGenRatio",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "contract MixInterface",
+        "name": "_mix",
+        "type": "address"
+      }
+    ],
+    "name": "setMix",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_nextGen",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_ratio",
+        "type": "uint256"
+      }
+    ],
+    "name": "setNextGenRatio",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "contract IERC20",
+        "name": "_uninoCoin",
+        "type": "address"
+      }
+    ],
+    "name": "setUnionCoin",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -943,6 +1172,19 @@
       }
     ],
     "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_newFactory",
+        "type": "address"
+      }
+    ],
+    "name": "transferFactory",
+    "outputs": [],
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {

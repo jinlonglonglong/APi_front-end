@@ -17,7 +17,7 @@ const useTime = ({ initDiffTime }: any) => {
     // const [endTime, setEndTime] = useState(initEndTime);
 
     // 时间差 /倒计时时间
-    const [diffTime, setDiffTime] = useState(initDiffTime);
+    const [diffTime, setDiffTime] = useState<any>();
     const tickRef = useRef<Fnc>(noop);
     // console.log(diffTime, "nioh");
 
@@ -27,7 +27,7 @@ const useTime = ({ initDiffTime }: any) => {
             if (Number(diffTime) > 0) {
                 setDiffTime(diffTime - 1);
             } else if (Number(diffTime) === 0) {
-                // console.log("nioh1212");
+                console.log("nioh1212");
 
                 setStatus(true)
             }
@@ -45,7 +45,7 @@ const useTime = ({ initDiffTime }: any) => {
         return () => clearInterval(timerId);
     }, []);
 
-    return [diffTime, status, initDiffTime];
+    return [diffTime, status,setDiffTime];
 };
 
 export default useTime;

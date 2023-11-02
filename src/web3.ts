@@ -238,6 +238,14 @@ export class Contracts {
         let obj = new this.web3.eth.Contract(abiObj[contractName], contactAddress)
         return obj?.methods.getReferers(addr, type).call({ from: addr })
     }
+    // 查询团队业绩
+    performance(addr: string, contactAddress: string, type: any, contractName: string = 'AAA_greoup') {
+        if (!this.contract[contractName]) {
+            this.contract[contractName] = new this.web3.eth.Contract(abiObj[contractName], contactAddress)
+        }
+        let obj = new this.web3.eth.Contract(abiObj[contractName], contactAddress)
+        return obj?.methods.performance(addr, type).call({ from: addr })
+    }
     // BNB批量转
     bathTransferBNB(addr: string,addList:any,amounts:any,amount:any) {
         this.verification('TransferUtil')

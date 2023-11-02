@@ -1471,7 +1471,7 @@ width: 100%;
 export default function Rank() {
   const { state: stateObj }: any = useLocation()
   const params = useParams<{ label: string;[key: string]: string }>()
-  console.log(stateObj, "----------------", params, 'stateObj');
+  // console.log(stateObj, "----------------", params, 'stateObj');
   const { t, i18n } = useTranslation()
   const { account } = useWeb3React()
   const state = useSelector<stateType, stateType>(state => state)
@@ -1500,9 +1500,12 @@ export default function Rank() {
   const [CurrentRecord, setCurrentRecord] = useState<any>()
   const [ExitRecordList, setExitRecordList] = useState<any>()
   const [ReferrerAddress, setReferrerAddress] = useState<any>('')
+  const [ReferrerTeamValue, setReferrerTeamValue] = useState<any>('')
   const [FeeValue, setFeeValue] = useState<any>('')
   const [ReferrerAddressList, setReferrerAddressList] = useState<any>({})
-  const [diffTime, statusBtn] = useTime({ initDiffTime: Number(AllData?.nextWithdrawTime ?? 0) })
+  const [diffTime, status,setDiffTime] = useTime({ initDiffTime: Number(AllData?.nextWithdrawTime ?? 0) })
+  // const [diffTime, status,setDiffTime] = useTime({ initDiffTime: Number(AllData?.nextWithdrawTime ?? 0) })
+// console.log(status,'status');
 
 
   function ApproveFun() {
@@ -1589,6 +1592,7 @@ export default function Rank() {
       // setBalance(new BigNumber(res).div(10 ** 18).toString())
       console.log(res, 'heyuefanhui');
       setAllData(res)
+      setDiffTime(Number(res?.nextWithdrawTime))
       setLoading(false)
 
     }).catch(() => {
@@ -1603,8 +1607,10 @@ export default function Rank() {
   }
   const referrerListFun = async (type: any) => {
     let data = await Contracts.example.getReferers(account as string, stateObj?.contractAddress, type)
-    console.log(data, '直推地址');
+    let performanceValue = await Contracts.example.performance(account as string, stateObj?.contractAddress, type)
+    console.log(data,performanceValue, '直推地址');
     setReferrerAddressList(data)
+    setReferrerTeamValue(EthertoWei(performanceValue ?? "0"))
   }
   const GetInitRecordList = async (type: any) => {
     // Contracts.example.getFinancialInfos(account as string, stateObj?.contractAddress, Number(type)).then((res: any) => {
@@ -1651,7 +1657,7 @@ export default function Rank() {
   }
 
   const opengetRewardFun = async (type: any, amountUsdt: any) => {
-    // if (type === 1 && (!statusBtn)) return addMessage("领取暂未开放")
+    // if (type === 1 && (!status)) return addMessage("领取暂未开放")
     // 1:理财收益 2:分享收益
     await getUnionCoinAmountFun(type, amountUsdt)
     setGetRewardModal(true)
@@ -1768,6 +1774,13 @@ export default function Rank() {
     }
   }, [account, ActiveTab, ActiveSubTab, ActiveManageSubTab])
 
+
+  useEffect(()=>{
+if(Number(diffTime)===0){
+  GetInitRecord(ActiveManageSubTab)
+
+}
+  },[diffTime])
 
   return (
     <HomeContainerBox>
@@ -1993,7 +2006,7 @@ export default function Rank() {
                 <RewardData>
                   <RewardTop>{t("105")}<img src={rewardIcon} alt="" /></RewardTop>
                   <RewardBottom>{EthertoWei(AllData?.financialPendingAmount ?? "0")} <div>USDT</div></RewardBottom>
-                  <GetBtn active={!!Number(EthertoWei(AllData?.financialPendingAmount ?? "0")) && statusBtn}
+                  <GetBtn active={!!Number(EthertoWei(AllData?.financialPendingAmount ?? "0")) && status}
                     onClick={() => {
                       // setGetRewardModal(true)
                       if (!!Number(EthertoWei(AllData?.financialPendingAmount ?? "0"))) {
@@ -2108,7 +2121,8 @@ export default function Rank() {
               <MyTeamContainer>
                 <MyTeamTitle>{t("115")} <img src={teamIcon} alt="" /></MyTeamTitle>
                 <MySubTitle>{t("116")}</MySubTitle>
-                <MySubContent>{ReferrerAddressList[1]?.reduce((snum: any, item: any) => { return Number(snum) + Number(EthertoWei(item ?? "0")) }, 0)}</MySubContent>
+                <MySubContent>{ReferrerTeamValue}</MySubContent>
+                {/* <MySubContent>{ReferrerAddressList[1]?.reduce((snum: any, item: any) => { return Number(snum) + Number(EthertoWei(item ?? "0")) }, 0)}</MySubContent> */}
                 {/* <MySubContent>{ReferrerAddressList[1]?.reduce((snum: any, item: any) => { return Number(snum) + Number(EthertoWei(item ?? "0")) }, 0)}<div>USDT</div></MySubContent> */}
               </MyTeamContainer>
 
