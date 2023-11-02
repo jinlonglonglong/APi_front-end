@@ -1,0 +1,532 @@
+.ant-layout-header {
+  // border-bottom: 1px solid rgba(255, 255, 255, 0.20) !important;
+  background: transparent !important;
+  // backdrop-filter: blur(11px);
+  max-width: 450px;
+  padding: 0 !important;
+}
+
+.Header-Edition-Center {
+  max-width: 1500px;
+  padding: 0 16px;
+}
+
+@media (max-width: 425px) {
+  .Header-Edition-Center {
+    padding: 0px 12px;
+  }
+}
+
+
+
+.HeaderNav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  height: 100%;
+  z-index: 999;
+  padding: 0px 24px;
+  // overflow-x: hidden;
+
+  .switchItem {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    .box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+
+      svg {
+        width: 30px;
+        height: 30px;
+        color: #FFF;
+      }
+    }
+
+    // 菜单样式
+    .menuDropDown {
+      top: 57px !important;
+      left: 0 !important;
+
+
+
+      .menuItem {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.60);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 14px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+
+        img {
+          margin-right: 8px;
+        }
+      }
+
+      // .ant-dropdown-menu-item-selected,
+      // .ant-dropdown-menu-submenu-title-selected {
+      //   background-color: transparent !important;
+
+      //   .menuItem {
+      //     color: #FBC830 !important;
+      //   }
+      // }
+
+      .menuActiveItem {
+        color: #FFB752;
+      }
+
+      .ant-dropdown-menu-item,
+      .ant-dropdown-menu-submenu-title {
+        padding: 0px;
+
+        &:last-child {
+          .menuItem {
+            border: 0px;
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+  .HeadMenu {
+    z-index: 99999;
+    width: 36px;
+    height: 36px;
+    margin-left: 10px;
+    // border-radius: 50%;
+  }
+
+  .MenuList {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .MenuItem {
+
+      display: flex;
+      align-items: center;
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      // line-height: 25px;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.40);
+      padding: 0px 18px;
+
+      img {
+        margin-right: 10px;
+      }
+    }
+
+    .active {
+      color: #06C;
+      // font-weight: 700;
+    }
+
+  }
+
+  .setBox {
+    display: flex;
+    align-items: center;
+
+    .priceBox {
+      font-family: 'DIN';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      /* identical to box height */
+      color: #4BAF73;
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+    }
+
+    .Lang {
+      display: flex;
+      align-items: center;
+      font-family: 'DIN';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: rgba(0, 0, 0, 0.60);
+      white-space: nowrap;
+    }
+
+    .Connect {
+      padding: 11px 20px;
+      line-height: 1.2;
+      border-radius: 1000px;
+      border: 1px solid #000;
+      color: #FFF;
+      text-align: center;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.3px;
+      text-transform: uppercase;
+      margin-left: 20px;
+      color: #4263EB;
+      font-family: Manrope;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%;
+      /* 18px */
+    }
+
+    .activeConnect {
+      border: 1px solid #3C84FF;
+      color: #3C84FF;
+    }
+  }
+
+
+
+
+  .Mobile {
+    display: none;
+
+    .MBASPrice {
+      margin-right: 10px;
+
+      .priceBox {
+        font-family: 'PingFang SC';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 17px;
+        /* identical to box height */
+        color: #018D06;
+
+        // img {
+        //   width: 16px;
+        //   height: 16px;
+        // }
+      }
+    }
+
+  }
+
+  @media (max-width: 1349px) {
+
+    // .MenuList {
+    //   display: none;
+    // }
+    .Mobile {
+      display: flex;
+      align-items: center;
+    }
+
+    .HeadMenu {
+      // display: none;
+    }
+
+    .MobileHeadMenu {
+      display: block;
+    }
+  }
+
+  .SBLMenu {
+    text-align: center;
+  }
+
+  .LangDropDown {
+    top: 56px !important;
+    z-index: 999999999 !important;
+    padding: 9px 10px;
+
+    >.ant-dropdown-menu {
+      border-radius: 10px;
+      background: #FFF;
+      box-shadow: 0px 0px 15px 0px rgba(66, 99, 235, 0.20);
+
+      .activeLangItem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background: rgba(66, 99, 235, 0.11);
+        min-height: 37px;
+        white-space: nowrap;
+        color: #000;
+        font-family: Source Han Sans CN;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        // line-height: 300%;
+        /* 42px */
+        letter-spacing: 0.112px;
+      }
+
+      .LangItem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 37px;
+        white-space: nowrap;
+        color: #7681AA;
+        font-family: Source Han Sans CN;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        // line-height: 300%;
+        letter-spacing: 0.112px;
+
+      }
+    }
+  }
+}
+
+.headerBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  // background: linear-gradient(174deg, rgba(235, 176, 23, 0.85) 32.9%, rgba(103, 85, 33, 0.85) 92.85%);
+  transform: translate(-65%, -66%);
+  filter: blur(54.5px);
+  background: #6AB7FF;
+  filter: blur(97px);
+  width: 194px;
+  height: 194px;
+  z-index: -99999;
+}
+
+.SubTitle {
+  width: 100%;
+  position: absolute;
+  z-index: 9999;
+  top: 80px;
+  display: flex;
+  justify-content: center;
+  background: #EFF8FF;
+  overflow-x: auto;
+
+  .menuContent {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1440px;
+
+    .Item {
+      padding: 22px;
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 28px;
+      /* identical to box height */
+      text-align: center;
+      color: rgba(0, 0, 0, 0.40);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .line {
+        margin-top: 10px;
+        width: 58px;
+        height: 2px;
+        background: transparent
+      }
+
+      .lineActive {
+        background: radial-gradient(50% 50% at 50% 50%, #0066CC 0%, rgba(165, 242, 0, 0) 100%);
+      }
+    }
+
+    .activeItem {
+      color: #06C;
+    }
+  }
+}
+
+
+
+
+.DropItem {
+  padding: 5px 12px !important;
+}
+
+.MainContent {
+  padding: 64px 0px 83px;
+}
+
+.ant-modal-centered .Modal .ant-modal-content .ant-modal-body .Content-Modal .refereeAddress {
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF;
+
+  .tip {
+    input {
+      border-radius: 6px;
+      border: 1px solid rgba(251, 200, 48, 0.40);
+      background: #000;
+      color: #fff;
+      font-family: PingFang SC;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      padding: 12px;
+    }
+  }
+
+  .btnBox {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    >div {
+      margin: 0px 5px;
+      padding: 6px 13px;
+      max-width: 110px;
+      width: 100%;
+      background: #828874;
+      border-radius: 34px;
+    }
+
+    .confirmBtn {
+      border-radius: 6px;
+      background: linear-gradient(90deg, #EB6617 0%, #FBC830 100%, #FBC830 100%);
+      color: #4E2D05;
+      text-align: center;
+      font-family: PingFang SC;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+}
+
+.ant-menu {
+  li {
+    &::after {
+      border-right: none
+    }
+  }
+
+  .ant-menu-item-selected {
+    .ant-menu-title-content {
+      color: #06C !important;
+    }
+  }
+}
+
+.ant-menu,
+.ant-menu-sub.ant-menu-inline,
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background: transparent !important;
+}
+
+.ant-menu-inline.ant-menu-root .ant-menu-item>.ant-menu-title-content,
+.ant-menu-inline.ant-menu-root .ant-menu-submenu-title>.ant-menu-title-content {
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.40);
+}
+
+.ant-menu-inline .ant-menu-item:after,
+.ant-menu-vertical-left .ant-menu-item:after,
+.ant-menu-vertical-right .ant-menu-item:after,
+.ant-menu-vertical .ant-menu-item:after {
+  border-right: 0 !important;
+}
+
+.ant-menu-submenu-arrow,
+.ant-menu-submenu-expand-icon {
+  color: #06C !important;
+}
+
+.ant-menu-inline.ant-menu-root .ant-menu-item>.ant-menu-title-content,
+.ant-menu-inline.ant-menu-root .ant-menu-submenu-title>.ant-menu-title-content {
+  text-align: left;
+}
+
+.app-footer {
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  padding: 18px 26px 24px;
+  height: 83px;
+  width: 100%;
+  max-width: 450px;
+  z-index: 999;
+  background: #FFF !important;
+
+  .tabBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .tabItem {
+      >div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .MenuItem {
+        color: #BDDDEF;
+        text-align: center;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Manrope;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        /* 18px */
+      }
+
+      .active {
+        background: linear-gradient(180deg, #6CB6FF 0%, #04DAFE 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Manrope;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        /* 18px */
+      }
+    }
+  }
+}
+
+@media (max-width:375px) {
+  .app-footer {
+    padding: 8px 24px 14px;
+  }
+}

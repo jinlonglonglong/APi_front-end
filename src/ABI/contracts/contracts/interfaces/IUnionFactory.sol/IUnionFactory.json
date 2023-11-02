@@ -1,0 +1,97 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "IUnionFactory",
+  "sourceName": "contracts/interfaces/IUnionFactory.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "initializeParameters",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "foundationAccount",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "marketAccount",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "communityAccount",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "defaultBoundAccount",
+          "type": "address"
+        },
+        {
+          "internalType": "contract IERC20",
+          "name": "APi",
+          "type": "address"
+        },
+        {
+          "internalType": "contract IERC20",
+          "name": "unionCoin",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "withdrawFeeReceiver",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "parameters",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "symbol",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "factory",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "unionAccount",
+          "type": "address"
+        },
+        {
+          "internalType": "contract IUniswapV2Router02",
+          "name": "pancakeRouter",
+          "type": "address"
+        },
+        {
+          "internalType": "contract IERC20",
+          "name": "usdt",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
