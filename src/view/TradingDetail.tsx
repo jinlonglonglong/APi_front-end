@@ -2108,7 +2108,8 @@ export default function Rank() {
               <MyTeamContainer>
                 <MyTeamTitle>{t("115")} <img src={teamIcon} alt="" /></MyTeamTitle>
                 <MySubTitle>{t("116")}</MySubTitle>
-                <MySubContent>{ReferrerAddressList[1]?.reduce((snum: any, item: any) => { return Number(snum) + Number(EthertoWei(item ?? "0")) }, 0)}<div>USDT</div></MySubContent>
+                <MySubContent>{ReferrerAddressList[1]?.reduce((snum: any, item: any) => { return Number(snum) + Number(EthertoWei(item ?? "0")) }, 0)}</MySubContent>
+                {/* <MySubContent>{ReferrerAddressList[1]?.reduce((snum: any, item: any) => { return Number(snum) + Number(EthertoWei(item ?? "0")) }, 0)}<div>USDT</div></MySubContent> */}
               </MyTeamContainer>
 
               <MyInviteContainer>
