@@ -75,7 +75,7 @@ export const GroupArr = [
     { id: 1, icon: AvtorIcon1, title: "274", contractAddress: "0xB328ca9bc03b629c29eCa0dA19292A2e9F9A1A14", defaultAddress: " 0x9610B26afA8727b42A4C9Da81eA697cAc2431cC0", "coinAddress": "0x55d398326f99059fF775485246999027B3197955" },
     // { id: 2, icon: AvtorIcon2, title: "275", contractAddress: "", defaultAddress: "0xd8F80A99559EFf7aA35b34E7Fe0BdBCe2d075e14", "coinAddress": "0x55d398326f99059fF775485246999027B3197955" },
     { id: 2, icon: AvtorIcon2, title: "275", contractAddress: "0x2D7DB47A836f0E177916FF75914e2cD5Cd6d798f", defaultAddress: "0xd8F80A99559EFf7aA35b34E7Fe0BdBCe2d075e14", "coinAddress": "0x55d398326f99059fF775485246999027B3197955" },
-    { id: 3, icon: AvtorIcon3, title: "276", contractAddress: "", defaultAddress: "0xCb75C706a45fefF971359F53dF7DD6dF47a41013", "coinAddress": "0xc0285e3235A76f17c68742EFCeA6B625657F8362" },
+    { id: 3, icon: AvtorIcon3, title: "276", contractAddress: "0xAf7265a6bd298492740414C198d48fB62137f73D", defaultAddress: "0x5CF96D8c353Cd9b0487A38005f4F41E77294b6A7", "coinAddress": "0x55d398326f99059fF775485246999027B3197955" },
     { id: 4, icon: AvtorIcon4, title: "277", contractAddress: "", defaultAddress: "0xCb75C706a45fefF971359F53dF7DD6dF47a41013", "coinAddress": "0xc0285e3235A76f17c68742EFCeA6B625657F8362" },
     { id: 5, icon: AvtorIcon5, title: "278", contractAddress: "", defaultAddress: "0xCb75C706a45fefF971359F53dF7DD6dF47a41013", "coinAddress": "0xc0285e3235A76f17c68742EFCeA6B625657F8362" },
     { id: 6, icon: AvtorIcon6, title: "279", contractAddress: "", defaultAddress: "0xCb75C706a45fefF971359F53dF7DD6dF47a41013", "coinAddress": "0xc0285e3235A76f17c68742EFCeA6B625657F8362" },
